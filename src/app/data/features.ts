@@ -1,23 +1,26 @@
 import { FeatureGrid } from "../types";
+import { LuFileSearch } from "react-icons/lu";
+import { IoBug } from "react-icons/io5";
+import { GiComputing } from "react-icons/gi";
 
 const features: FeatureGrid[] = [
   {
     title: "Smart Code Analysis",
     description:
       "Get detailed explanations of complex code snippets with AI-powered insights.",
-    icon: "<LuFileSearch />",
+    icon: LuFileSearch,
   },
   {
     title: "Intelligent Debugging",
     description:
       "Find and fix bugs quickly with AI-driven debugging suggestions.",
-    icon: "<IoBug />",
+    icon: IoBug,
   },
   {
     title: "Code Generation",
     description:
       "Generate code from natural language descriptions in multiple programming languages.",
-    icon: "<GiComputing />",
+    icon: GiComputing,
   },
 ];
 
