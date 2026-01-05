@@ -1,4 +1,6 @@
-const features = [
+import { FeatureGrid } from "../types";
+
+const features: FeatureGrid[] = [
   {
     title: "Smart Code Analysis",
     description:

@@ -1,4 +1,6 @@
-const tabs = [
+import { Tab } from "../types";
+
+const tabs: Tab[] = [
   {
     id: "explain",
     label: "Explain Code",
