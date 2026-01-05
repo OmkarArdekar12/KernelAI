@@ -2,11 +2,11 @@
 
 import React, { useState } from "react";
 import HistoryPanel from "./HistoryPanel";
-import tabs from "../data/tabs";
 import { HistoryItem, Tab } from "../types";
 import CodeExplanation from "./CodeExplanation";
 import CodeDebugging from "./CodeDebugging";
 import CodeGeneration from "./CodeGeneration";
+import tabs from "../data/tabs";
 
 const MainContent = () => {
   const [activeTab, setActiveTab] = useState<Tab["id"]>("explain");
