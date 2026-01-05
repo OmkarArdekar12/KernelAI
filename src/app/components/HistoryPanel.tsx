@@ -44,9 +44,33 @@ const HistoryPanel = ({ history }: HistoryItemProps) => {
     }
   };
 
+  history.push({
+    id: 1,
+    type: "explain",
+    timestamp: new Date().toLocaleString(),
+    input: "Give the JavaScript Code ",
+    output: "for (let i=0; i<=n; ++i) {}",
+  });
+
+  history.push({
+    id: 2,
+    type: "debug",
+    timestamp: new Date().toLocaleString(),
+    input: "Give the JavaScript Code ",
+    output: "for (let i=0; i<=n; ++i) {}",
+  });
+
+  history.push({
+    id: 3,
+    type: "generate",
+    timestamp: new Date().toLocaleString(),
+    input: "Give the JavaScript Code ",
+    output: "for (let i=0; i<=n; ++i) {}",
+  });
+
   return (
     <div className="w-full bg-black-800/50 backdrop-blur-xl rounded-2xl shadow-2xl border border-emerald-600/95">
-      <div className="w-full flex flex-col items-start bg-black-800/50 p-6">
+      <div className="w-full flex flex-col items-start bg-black-800/50 p-6 border-b border-emerald-600/95">
         <div className="flex items-center justify-between">
           <h2 className="text-xl font-semibold text-gray-200 text-center">
             Recent Activity
@@ -68,14 +92,47 @@ const HistoryPanel = ({ history }: HistoryItemProps) => {
             </p>
           </div>
         ) : (
-          <div className="space-y-3">
+          <div className="w-full flex flex-col items-center space-y-3">
             {history.map((item) => {
               const config = getTypeConfig(item.type);
+              const Icon = config.icon;
               return (
                 <div
                   key={item.id}
-                  className="p-4 rounded-xl border border-gray-800/50 hover:border-gray-700/50 transition-all duration-200 group backdrop-blur-sm bg-black-900/50"
-                ></div>
+                  className="w-full flex flex-col items-center p-4 rounded-xl border border-gray-600/50 hover:border-gray-500/50 transition-all duration-200 group backdrop-blur-sm bg-black-900/50"
+                >
+                  <div className="w-full flex flex-col gap-1 mb-3">
+                    <div
+                      className={`flex space-x-2 bg-linear-to-tl ${config.color} py-1 px-2 rounded-xl`}
+                    >
+                      <Icon className="size-4" />
+                      <span className="text-sm font-medium text-gray-200 capitalize">
+                        {item.type}
+                      </span>
+                    </div>
+                    <span className="text-xs text-gray-400 group-hover:text-gray-300">
+                      {item.timestamp}
+                    </span>
+                  </div>
+                  <div className="w-full flex flex-col space-y-2">
+                    <div className="w-full">
+                      <p className="text-xs font-medium text-gray-300 mb-1">
+                        Input
+                      </p>
+                      <p className="text-sm text-gray-200 whitespace-pre-wrap leading-relaxed">
+                        {formatContent(item.input, 60)}
+                      </p>
+                    </div>
+                    <div className="w-full">
+                      <p className="text-xs font-medium text-gray-300 mb-1">
+                        Output
+                      </p>
+                      <p className="text-sm text-gray-200 whitespace-pre-wrap leading-relaxed">
+                        {formatContent(item.output, 80)}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               );
             })}
           </div>

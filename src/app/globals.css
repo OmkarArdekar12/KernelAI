@@ -14,3 +14,22 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.kernel-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.kernel-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 9999px;
+}
+
+.kernel-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    rgba(16, 185, 129, 0.8),
+    rgba(52, 211, 153, 0.8),
+    rgba(20, 184, 166, 0.8)
+  );
+  border-radius: 9999px;
+}
