@@ -27,7 +27,7 @@ export const POST = async (req: NextRequest) => {
   } catch (err) {
     console.error("Error in Code Explanation: ", err);
     return NextResponse.json(
-      { error: "Failed to generate explanation" },
+      { error: "Failed to generate code explanation." },
       { status: 500 }
     );
   }
