@@ -1,3 +1,5 @@
+import { IconType } from "react-icons";
+
 export interface ExplainRequest {
   code: string;
 }
@@ -31,7 +33,7 @@ export interface Tab {
 export interface FeatureGrid {
   title: string;
   description: string;
-  icon: string;
+  icon: IconType;
 }
 
 export interface HistoryItem {
