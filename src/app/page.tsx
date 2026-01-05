@@ -10,6 +10,7 @@ export default function Home() {
           <nav className="flex w-full items-center justify-center">
             <Header />
           </nav>
+          <main></main>
         </header>
       </div>
     </div>
