@@ -25,8 +25,7 @@ export default function TypewriterText({
       interval = setInterval(() => {
         setDisplayedText((prev) => prev + text[index]);
         index++;
-
-        if (index >= text.length) {
+        if (index >= text.length - 1) {
           clearInterval(interval);
         }
       }, speed);
