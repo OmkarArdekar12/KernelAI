@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import KernelAIBrand from "./KernelAIBrand";
 import TypewriterText from "./TypewriterText";
