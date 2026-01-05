@@ -28,7 +28,7 @@ const FeatureGrid = () => {
                 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 transition group-hover:animate-bounce">
                   <Icon size={24} />
                 </div>
-                <h3 className="mb-2 text-lg font-semibold text-white group-hover:animate-pulse">
+                <h3 className="mb-2 text-lg font-semibold text-gray-100 group-hover:animate-pulse">
                   {feature.title}
                 </h3>
               </div>
