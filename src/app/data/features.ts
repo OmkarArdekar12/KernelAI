@@ -7,7 +7,7 @@ const features: FeatureGrid[] = [
   {
     title: "Smart Code Analysis",
     description:
-      "Get detailed explanations of complex code snippets with AI-powered insights.",
+      "Get detailed explanations of complex codes with AI-powered insights.",
     icon: LuFileSearch,
   },
   {
