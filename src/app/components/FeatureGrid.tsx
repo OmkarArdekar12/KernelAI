@@ -13,7 +13,7 @@ const FeatureGrid = () => {
         ease: "easeOut",
         delay: 2.5,
       }}
-      className="w-full flex items-center justify-center py-10 px-6 md:px-20 transition-all duration-200"
+      className="w-full flex items-center justify-center py-10 px-6 md:px-20 transition-all duration-100"
     >
       <div className="flex flex-col md:flex-row gap-5 items-center justify-center w-full px-4">
         {features.map((feature, index) => {
