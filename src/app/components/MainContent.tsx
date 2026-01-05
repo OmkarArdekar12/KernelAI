@@ -28,10 +28,10 @@ const MainContent = () => {
   };
 
   return (
-    <div className="w-full flex flex-col items-center justify-center lg:flex-row gap-8 py-2 px-1 sm:px-4 md:px-10">
-      <div className="w-full lg:2/3 flex flex-col">
+    <div className="w-full flex flex-col items-center justify-center lg:flex-row gap-8 py-2 px-1 sm:px-4 md:px-10 transition-all duration-300">
+      <div className="w-full lg:w-2/3 flex flex-col">
         <div className="w-full bg-black-800/50 backdrop-blur-xl rounded-2xl shadow-2xl border border-emerald-600/95">
-          <div className="w-full flex flex-wrap items-center gap-3 border-b border-emerald-600/95 border-black-700/50 bg-black-900-50 p-2">
+          <div className="w-full flex flex-wrap items-center gap-3 border-b border-emerald-600/95 bg-black-900/50 p-2">
             {tabs.map((tab: Tab) => {
               const Icon = tab.icon;
               return (
@@ -53,19 +53,21 @@ const MainContent = () => {
             })}
           </div>
           <div className="w-full flex items-center p-6">
-            {activeTab == "explain" && (
+            {activeTab === "explain" && (
               <CodeExplanation addToHistory={addToHistory} />
             )}
-            {activeTab == "debug" && (
+            {activeTab === "debug" && (
               <CodeDebugging addToHistory={addToHistory} />
             )}
-            {activeTab == "generate" && (
+            {activeTab === "generate" && (
               <CodeGeneration addToHistory={addToHistory} />
             )}
           </div>
         </div>
       </div>
-      <HistoryPanel history={history} />
+      <div className="w-full lg:w-1/3 flex items-center justify-center">
+        <HistoryPanel history={history} />
+      </div>
     </div>
   );
 };

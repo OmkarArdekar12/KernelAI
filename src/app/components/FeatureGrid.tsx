@@ -13,7 +13,7 @@ const FeatureGrid = () => {
         ease: "easeOut",
         delay: 2.5,
       }}
-      className="w-full flex items-center justify-center py-10 px-6 md:px-20"
+      className="w-full flex items-center justify-center py-10 px-6 md:px-20 transition-all duration-200"
     >
       <div className="flex flex-col md:flex-row gap-5 items-center justify-center w-full px-4">
         {features.map((feature, index) => {
@@ -22,7 +22,7 @@ const FeatureGrid = () => {
           return (
             <div
               key={index}
-              className="flex flex-col items-center justify-center group relative rounded-2xl border border-emerald-500/20 bg-black/40 backdrop-blur-md p-6 hover:border-emerald-400/40 transition"
+              className="flex flex-col items-center justify-center group relative rounded-2xl border border-emerald-500/20 bg-black/40 backdrop-blur-md p-6 hover:border-emerald-400/40 transition-all"
             >
               <div className="flex flex-col md:flex-row items-center justify-center gap-2">
                 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 transition group-hover:animate-bounce">
