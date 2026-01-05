@@ -11,7 +11,7 @@ const Footer = () => {
       transition={{
         duration: 0.6,
         ease: "easeOut",
-        delay: 3,
+        delay: 2,
       }}
       className="w-full px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm"
     >
