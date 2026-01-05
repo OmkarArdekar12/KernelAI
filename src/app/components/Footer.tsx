@@ -1,8 +1,20 @@
+"use client";
+
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <div className="w-full px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+    <motion.div
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.6,
+        ease: "easeOut",
+        delay: 3,
+      }}
+      className="w-full px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm"
+    >
       <p className="text-emerald-300/70 text-center md:text-left">
         © {new Date().getFullYear()} KernelAI. Created by{" "}
         <a
@@ -35,7 +47,7 @@ const Footer = () => {
           <FaLinkedin size={20} />
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
