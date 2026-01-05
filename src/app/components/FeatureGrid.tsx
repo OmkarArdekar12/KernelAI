@@ -6,16 +6,16 @@ import { motion } from "framer-motion";
 const FeatureGrid = () => {
   return (
     <motion.section
-      initial={{ opacity: 0, y: 16 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 0, scale: 0.8 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{
-        duration: 0.6,
+        duration: 0.7,
         ease: "easeOut",
-        delay: 2,
+        delay: 2.5,
       }}
-      className="mt-20 max-w-6xl mx-auto px-6"
+      className="w-full flex items-center justify-center py-10 px-6 md:px-20"
     >
-      <div className="flex flex-col md:flex-row gap-3 items-center justify-center w-full px-4">
+      <div className="flex flex-col md:flex-row gap-5 items-center justify-center w-full px-4">
         {features.map((feature, index) => {
           const Icon = feature.icon;
 
