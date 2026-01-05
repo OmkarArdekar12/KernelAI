@@ -5,7 +5,6 @@ import { GiRegeneration } from "react-icons/gi";
 import { MdHistory } from "react-icons/md";
 import { HistoryItem } from "../types";
 import { FaHistory } from "react-icons/fa";
-import { div } from "framer-motion/client";
 
 interface HistoryItemProps {
   history: HistoryItem[];
@@ -43,30 +42,6 @@ const HistoryPanel = ({ history }: HistoryItemProps) => {
         };
     }
   };
-
-  history.push({
-    id: 1,
-    type: "explain",
-    timestamp: new Date().toLocaleString(),
-    input: "Give the JavaScript Code ",
-    output: "for (let i=0; i<=n; ++i) {}",
-  });
-
-  history.push({
-    id: 2,
-    type: "debug",
-    timestamp: new Date().toLocaleString(),
-    input: "Give the JavaScript Code ",
-    output: "for (let i=0; i<=n; ++i) {}",
-  });
-
-  history.push({
-    id: 3,
-    type: "generate",
-    timestamp: new Date().toLocaleString(),
-    input: "Give the JavaScript Code ",
-    output: "for (let i=0; i<=n; ++i) {}",
-  });
 
   return (
     <div className="w-full bg-black-800/50 backdrop-blur-xl rounded-2xl shadow-2xl border border-emerald-600/95">
