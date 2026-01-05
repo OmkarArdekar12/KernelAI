@@ -7,8 +7,8 @@ const Header = () => {
         <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-md">
           <span></span>
         </div>
-        <h1 className="text-5xl font-bold bg-linear-to-r from-blue-400 to-purple-500">
-          KernelAI
+        <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+          Kernel<span className="text-emerald-400">AI</span>
         </h1>
       </div>
       <p className="text-gray-300 text-lg max-w-2xl mx-auto">
