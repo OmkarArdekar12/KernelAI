@@ -25,10 +25,10 @@ const FeatureGrid = () => {
               className="flex flex-col items-center justify-center group relative rounded-2xl border border-emerald-500/20 bg-black/40 backdrop-blur-md p-6 hover:border-emerald-400/40 transition"
             >
               <div className="flex flex-col md:flex-row items-center justify-center gap-2">
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 transition">
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 transition group-hover:animate-bounce">
                   <Icon size={24} />
                 </div>
-                <h3 className="mb-2 text-lg font-semibold text-white">
+                <h3 className="mb-2 text-lg font-semibold text-white group-hover:animate-pulse">
                   {feature.title}
                 </h3>
               </div>
