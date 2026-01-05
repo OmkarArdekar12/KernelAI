@@ -1,6 +1,7 @@
 import FeatureGrid from "./components/FeatureGrid";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import MainContent from "./components/MainContent";
 import MatrixBackground from "./components/MatrixBackground";
 
 export default function Home() {
@@ -13,9 +14,10 @@ export default function Home() {
             <Header />
           </nav>
         </header>
-        <main className="flex-1 flex-col w-full items-center justify-center">
-          <FeatureGrid />
+        <main className="flex-1 flex flex-col w-full items-center justify-center py-2 px-4">
+          <MainContent />
         </main>
+        <FeatureGrid />
         <footer className="flex w-full items-center justify-center">
           <Footer />
         </footer>

@@ -26,7 +26,7 @@ export interface GenerateResponse {
 export interface Tab {
   id: "explain" | "debug" | "generate";
   label: string;
-  icon: string;
+  icon: IconType;
   gradient: string;
 }
 
