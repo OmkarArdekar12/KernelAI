@@ -13,7 +13,9 @@ export default function Home() {
           </nav>
         </header>
         <main></main>
-        <Footer />
+        <footer className="flex w-full items-center justify-center">
+          <Footer />
+        </footer>
       </div>
     </div>
   );
