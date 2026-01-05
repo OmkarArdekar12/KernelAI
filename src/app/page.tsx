@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="w-full h-full min-w-full relative min-h-screen bg-black text-white">
       <MatrixBackground />
-      <div className="relative z-10 flex flex-column w-full items-center justify-center p-10">
+      <div className="relative z-10 flex flex-column w-full items-center justify-center p-6">
         <Header />
       </div>
     </main>
