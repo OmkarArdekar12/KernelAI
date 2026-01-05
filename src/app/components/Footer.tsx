@@ -13,7 +13,7 @@ const Footer = () => {
         ease: "easeOut",
         delay: 2,
       }}
-      className="w-full px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm"
+      className="w-full px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm bg-black/70 border-t-black/70"
     >
       <p className="text-emerald-300/70 text-center md:text-left">
         © {new Date().getFullYear()} KernelAI. Created by{" "}
