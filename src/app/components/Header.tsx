@@ -6,7 +6,7 @@ import TypewriterText from "./TypewriterText";
 
 const Header = () => {
   return (
-    <div className="text-center mb-12 px-2">
+    <div className="text-center mb-12 px-2 transition-all duration-100">
       <div className="flex items-center justify-center mb-4">
         <KernelAIBrand />
       </div>
