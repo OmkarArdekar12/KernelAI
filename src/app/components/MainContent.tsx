@@ -30,10 +30,10 @@ const MainContent = () => {
 
   return (
     <motion.div
-      initial={{ display: "none", opacity: 0, y: 0, scale: 0.7 }}
+      initial={{ display: "none", opacity: 0, y: 0, scale: 0.1 }}
       animate={{ display: "flex", opacity: 1, y: 0, scale: 1 }}
       transition={{
-        duration: 0.7,
+        duration: 0.6,
         ease: "easeOut",
         delay: 4.5,
       }}
