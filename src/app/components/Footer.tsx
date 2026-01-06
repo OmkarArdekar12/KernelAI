@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 const Footer = () => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 16 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ display: "none", opacity: 0, y: 16 }}
+      animate={{ display: "flex", opacity: 1, y: 0 }}
       transition={{
         duration: 0.6,
         ease: "easeOut",
