@@ -17,7 +17,6 @@ const CodeExplanation = ({ addToHistory }: CodeExplanationProps) => {
   const [code, setCode] = useState<string>("");
   const [explanation, setExplanation] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
-  const [copiedBlock, setCopiedBlock] = useState<string | null>(null);
 
   const handleExplain = async () => {
     if (!code.trim()) {
