@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { HistoryItem } from "../types";
 import toast from "react-hot-toast";
-import { languages } from "../data/examples";
+import { languages, samplePromptsWithLanguages } from "../data/examples";
 import { GiProcessor } from "react-icons/gi";
 import KernelOutput from "./KernelOutput";
 import LanguageSelect from "./LanguageSelect";
@@ -70,7 +70,14 @@ const CodeGeneration = ({ addToHistory }: CodeGenerationProps) => {
   };
 
   const insertSample = () => {
-    setLanguage("Java");
+    setOpen(false);
+    const randomSample =
+      samplePromptsWithLanguages[
+        Math.floor(Math.random() * samplePromptsWithLanguages.length)
+      ];
+
+    setLanguage(randomSample.language);
+    setDescription(randomSample.description);
   };
 
   return (
@@ -82,7 +89,7 @@ const CodeGeneration = ({ addToHistory }: CodeGenerationProps) => {
           disabled={loading}
           className="px-4 py-2 bg-gray-600/50 rounded-lg text-center hover:bg-green-600/50 cursor-pointer text-gray-300 hover:text-white transition-colors duration-100 text-sm disabled:cursor-not-allowed disabled:hover:bg-gray-600/50 disabled:hover:text-gray-300"
         >
-          Try Sample
+          Try Random Example
         </button>
       </div>
       <div className="w-full flex flex-col items-center justify-center space-y-4 p-1">
@@ -100,7 +107,6 @@ const CodeGeneration = ({ addToHistory }: CodeGenerationProps) => {
               toggleSelect={setOpen}
             />
           </div>
-
           <div className="w-full flex items-center justify-between px-2">
             <label
               htmlFor="description"
