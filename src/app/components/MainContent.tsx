@@ -28,7 +28,7 @@ const MainContent = () => {
   };
 
   return (
-    <div className="w-full flex flex-col items-center justify-center lg:flex-row gap-8 py-2 px-1 sm:px-4 md:px-10 transition-all duration-300">
+    <div className="w-full flex flex-col items-start justify-center lg:flex-row gap-8 py-2 px-1 sm:px-4 md:px-10 transition-all duration-300">
       <div className="w-full lg:w-2/3 flex flex-col">
         <div className="w-full bg-black-800/50 backdrop-blur-xl rounded-2xl shadow-2xl border border-emerald-600/95">
           <div className="w-full flex flex-wrap items-center gap-3 border-b border-emerald-600/95 bg-black-900/50 p-2">
