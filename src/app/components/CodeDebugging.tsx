@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { HistoryItem } from "../types";
 import toast from "react-hot-toast";
-import { sampleBuggyCode } from "../data/examples";
-import { FaLaptopCode } from "react-icons/fa";
+import { sampleBuggyCode, sampleError } from "../data/examples";
+import { VscDebugAll } from "react-icons/vsc";
 import KernelOutput from "./KernelOutput";
 
 interface CodeDebuggingProps {
@@ -69,12 +69,13 @@ const CodeDebugging = ({ addToHistory }: CodeDebuggingProps) => {
 
   const insertSample = () => {
     setCode(sampleBuggyCode);
+    setError(sampleError);
   };
 
   return (
     <div className="w-full flex flex-col justify-center space-y-6 transition-all duration-200">
       <div className="w-full flex items-center justify-between">
-        <h2 className="text-2xl font-bold text-white">Explain Code</h2>
+        <h2 className="text-2xl font-bold text-white">Debug Code</h2>
         <button
           onClick={insertSample}
           disabled={loading}
@@ -87,10 +88,10 @@ const CodeDebugging = ({ addToHistory }: CodeDebuggingProps) => {
         <div className="w-full flex flex-col justify-center p-2 gap-2">
           <div className="w-full flex items-center justify-between px-2">
             <label
-              htmlFor="code"
+              htmlFor="debug-code"
               className="block text-sm font-medium text-gray-300 ml-1"
             >
-              Paste your code
+              Code to Debug
             </label>
             <div className="block text-sm font-medium text-gray-300 mr-1">
               {code.length} chars
@@ -98,14 +99,40 @@ const CodeDebugging = ({ addToHistory }: CodeDebuggingProps) => {
           </div>
           <div className="w-full flex items-center justify-center">
             <textarea
-              name="code"
-              id="code"
+              name="debug-code"
+              id="debug-code"
               rows={12}
+              spellCheck={false}
               value={code}
               readOnly={loading}
               onChange={(e) => setCode(e.target.value)}
-              placeholder="Paste your code here to get a detailed explanation"
+              placeholder="Paste your buggy code here..."
               className={`w-full min-h-90 bg-black/60 text-emerald-100 placeholder:text-emerald-400/40 rounded-xl border border-emerald-500/40 px-4 py-3 font-normal text-md leading-relaxed backdrop-blur-md focus:outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/30 transition-all duration-200 ease-out resize-none overflow-y-auto kernel-scrollbar ${
+                loading ? "cursor-not-allowed opacity-70" : ""
+              }`}
+            />
+          </div>
+        </div>
+        <div className="w-full flex flex-col justify-center p-2 gap-2">
+          <div className="w-full flex items-center justify-between px-2">
+            <label
+              htmlFor="error"
+              className="block text-sm font-medium text-gray-300 ml-1"
+            >
+              Error Message (Optional)
+            </label>
+          </div>
+          <div className="w-full flex items-center justify-center">
+            <textarea
+              name="error"
+              id="error"
+              rows={3}
+              spellCheck={false}
+              value={error}
+              readOnly={loading}
+              onChange={(e) => setError(e.target.value)}
+              placeholder="Describe or paste the error message here..."
+              className={`w-full min-h-20 bg-black/60 text-emerald-100 placeholder:text-emerald-400/40 rounded-xl border border-emerald-500/40 px-4 py-3 font-normal text-md leading-relaxed backdrop-blur-md focus:outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/30 transition-all duration-200 ease-out resize-none overflow-y-auto kernel-scrollbar ${
                 loading ? "cursor-not-allowed opacity-70" : ""
               }`}
             />
@@ -113,25 +140,25 @@ const CodeDebugging = ({ addToHistory }: CodeDebuggingProps) => {
         </div>
         <div className="w-full flex items-center justify-center p-1">
           <button
-            onClick={handleExplain}
+            onClick={handleDebug}
             disabled={loading || !code}
             className={`w-full inline-flex items-center justify-center px-8 py-3 rounded-xl font-semibold text-white bg-emerald-600/95 shadow-lg shadow-emerald-500/25 hover:bg-emerald-500 hover:text-black transition-all duration-200 ease-out cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none disabled:bg-gray-500/60 disabled:hover:text-white`}
           >
             {loading ? (
               <span className="flex items-center gap-2">
                 <span className="h-5 w-5 rounded-full border-2 border-white/50 border-t-white animate-spin" />
-                Analyzing Code...
+                Debugging Code...
               </span>
             ) : (
               <span className="flex items-center gap-3">
-                <FaLaptopCode className="size-6" />
-                <span>Explain Code</span>
+                <VscDebugAll className="size-6" />
+                <span>Debug Code</span>
               </span>
             )}
           </button>
         </div>
-        {explanation && (
-          <KernelOutput output={explanation} outputType="Explanation" />
+        {debugging && (
+          <KernelOutput output={debugging} outputType="Debugging Fixes" />
         )}
       </div>
     </div>
