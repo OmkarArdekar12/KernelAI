@@ -30,7 +30,7 @@ const HistoryPanel = ({ history }: HistoryItemProps) => {
           icon: VscDebugAlt,
           color: "from-lime-600/95 via-emerald-600/95 to-green-600/95",
         };
-      case "explain":
+      case "generate":
         return {
           icon: GiRegeneration,
           color: "from-green-600/95 via-teal-600/95 to-emerald-600/95",
