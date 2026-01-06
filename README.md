@@ -1,3 +1,3 @@
 # KernelAI
 
-## KernelAI - NextJS powered AI Application
+## KernelAI
