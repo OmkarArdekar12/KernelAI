@@ -50,28 +50,16 @@
 
 <table width="100%">
   <tr>
-    <td colspan="2">
-      <img
-        src="./screenshots/preview-main.png"
-        alt="KernelAI Main Interface"
-        width="100%"
-      />
+    <td width="50%">
+      <img src="./public/kernelai-view2.png" alt="KernelAI Main UI" width="100%" />
+    </td>
+    <td width="50%" rowspan="2">
+      <img src="./public/kernelai-view3.png" alt="KernelAI Code Generation" width="100%" />
     </td>
   </tr>
   <tr>
-    <td width="50%">
-      <img
-        src="./screenshots/preview-explain.png"
-        alt="KernelAI Code Explanation"
-        width="100%"
-      />
-    </td>
-    <td width="50%">
-      <img
-        src="./screenshots/preview-generate.png"
-        alt="KernelAI Code Generation"
-        width="100%"
-      />
+    <td>
+      <img src="./public/kernelai-view1.png" alt="KernelAI Code Explanation" width="100%" />
     </td>
   </tr>
 </table>
