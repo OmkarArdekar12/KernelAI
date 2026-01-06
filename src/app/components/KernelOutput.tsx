@@ -33,7 +33,7 @@ function useTypewriter(text: string, speed = 6, step = 5) {
 }
 
 const KernelOutput = ({ outputType, output }: KernelOutputProps) => {
-  const typedOutput = useTypewriter(output, 5, 16);
+  const typedOutput = useTypewriter(output, 5, 12);
   const isTyping = typedOutput.length < output.length;
 
   const copyToClipboard = async (text: string, label?: string) => {
