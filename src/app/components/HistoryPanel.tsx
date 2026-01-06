@@ -76,20 +76,20 @@ const HistoryPanel = ({ history }: HistoryItemProps) => {
                   key={item.id}
                   className="w-full flex flex-col items-center p-4 rounded-xl border border-gray-600/50 hover:border-gray-500/50 transition-all duration-200 group backdrop-blur-sm bg-black-900/50"
                 >
-                  <div className="w-full flex flex-col gap-1 mb-3">
+                  <div className="w-full flex flex-col items-start justify-center gap-1 mb-3">
                     <div
-                      className={`flex space-x-2 bg-linear-to-tl ${config.color} py-1 px-2 rounded-xl`}
+                      className={`flex items-center space-x-2 bg-linear-to-tl ${config.color} py-1 px-4 rounded-xl`}
                     >
                       <Icon className="size-4" />
                       <span className="text-sm font-medium text-gray-200 capitalize">
                         {item.type}
                       </span>
                     </div>
-                    <span className="text-xs text-gray-400 group-hover:text-gray-300">
+                    <span className="pl-1 pt-1 text-xs text-gray-400 group-hover:text-gray-300">
                       {item.timestamp}
                     </span>
                   </div>
-                  <div className="w-full flex flex-col space-y-2">
+                  <div className="w-full flex flex-col space-y-2 pl-1">
                     <div className="w-full">
                       <p className="text-xs font-medium text-gray-300 mb-1">
                         Input
