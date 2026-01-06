@@ -14,36 +14,67 @@
 
 ## ✨ Core Features
 
-- Code Explanation
-- Code Debugging
-- Code Generation
-- Intelligent Language Selection
-- Interactive History Tracking
-- Structured & Formatted Output Rendering
-- Rich Code Blocks with Copy Support and Markdown-Aware AI Output (Headings, Lists, Tables, Code)
-- Fast Typewriter-Style Output Animation
-- Smooth UI Animations (Framer Motion)
-- Fully Responsive Design
-- Modern Dark UI with Glassmorphism Theme
-- Real-Time Toast Notifications
-- Context-Aware AI Prompts & Sample Inputs for Quick Testing
-- Client-Side Safe API Handling
+- **Code Explanation**
+- **Code Debugging**
+- **Code Generation**
+- **Intelligent Language Selection**
+- **Interactive History Tracking**
+- **Structured & Formatted Output Rendering**
+- **Rich Code Blocks with Copy Support and Markdown-Aware AI Output (Headings, Lists, Tables, Code)**
+- **Fast Typewriter-Style Output Animation**
+- **Smooth UI Animations (Framer Motion)**
+- **Fully Responsive Design**
+- **Modern Dark UI with Glassmorphism Theme**
+- **Real-Time Toast Notifications**
+- **Context-Aware AI Prompts & Sample Inputs for Quick Testing**
+- **Client-Side Safe API Handling**
 
 ## 💻 Technologies Used
 
-| Category                       | Technology                    | Purpose                                                       |
-| ------------------------------ | ----------------------------- | ------------------------------------------------------------- |
-| **Frontend Framework**         | Next.js (App Router)          | Full-stack React framework for routing, SSR, and API handling |
-| **UI Library**                 | React 19                      | Component-based UI development                                |
-| **Styling and Responsiveness** | Tailwind CSS 4                | Utility-first styling with modern design system               |
-| **Animations**                 | Framer Motion                 | Smooth, performant UI animations and transitions              |
-| **Icons**                      | React Icons                   | Consistent, scalable icon system                              |
-| **Notifications**              | React Hot Toast               | Real-time toast notifications and feedback                    |
-| **Markdown Rendering**         | React Markdown                | Structured rendering of AI-generated output                   |
-| **Markdown Extensions**        | Remark GFM                    | GitHub-Flavored Markdown support (tables, lists, code)        |
-| **AI Integration**             | Google Generative AI (Gemini) | Code generation, explanation, and debugging                   |
-| **Backend APIs**               | Next.js API Routes            | Secure server-side AI request handling                        |
-| **Type Safety**                | TypeScript                    | Static typing and safer codebase                              |
+| **Technology**                    | Category                   | Purpose                                                       |
+| --------------------------------- | -------------------------- | ------------------------------------------------------------- |
+| **Next.js (App Router)**          | Frontend Framework         | Full-stack React framework for routing, SSR, and API handling |
+| **React 19**                      | UI Library                 | Component-based user interface development                    |
+| **Next.js API Routes**            | Backend APIs               | Secure server-side AI request handling                        |
+| **Tailwind CSS 4**                | Styling and Responsiveness | Utility-first styling with a modern, responsive design system |
+| **Framer Motion**                 | Animations                 | Smooth, performant UI animations and transitions              |
+| **React Markdown**                | Markdown Rendering         | Structured rendering of AI-generated output                   |
+| **Remark GFM**                    | Markdown Extensions        | GitHub-Flavored Markdown support (tables, lists, code blocks) |
+| **React Hot Toast**               | Notifications              | Real-time toast notifications and user feedback               |
+| **Google Generative AI (Gemini)** | AI Integration             | Code generation, explanation, and debugging                   |
+| **TypeScript**                    | Type Safety                | Static typing and a safer, maintainable codebase              |
+| **React Icons**                   | Icons                      | Consistent, scalable icon system                              |
+| **Vercel**                        | Deployment & Hosting       | Fast, global deployment with optimized performance            |
+
+## User Interface Overview
+
+<table width="100%">
+  <tr>
+    <td colspan="2">
+      <img
+        src="./screenshots/preview-main.png"
+        alt="KernelAI Main Interface"
+        width="100%"
+      />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img
+        src="./screenshots/preview-explain.png"
+        alt="KernelAI Code Explanation"
+        width="100%"
+      />
+    </td>
+    <td width="50%">
+      <img
+        src="./screenshots/preview-generate.png"
+        alt="KernelAI Code Generation"
+        width="100%"
+      />
+    </td>
+  </tr>
+</table>
 
 ## Installation
 
