@@ -32,7 +32,7 @@ const LanguageSelect = ({
     };
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
-  }, []);
+  }, [toggleSelect]);
 
   return (
     <div ref={ref} className="relative w-full">
