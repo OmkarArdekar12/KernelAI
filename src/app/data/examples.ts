@@ -27,6 +27,42 @@ function calculateTotal(items) {
 
 export const sampleError = "TypeError: Cannot read properties of undefined.";
 
+// examples.ts
+export const samplePromptsWithLanguages = [
+  {
+    language: "Java",
+    description: "Create a function that reverses a string efficiently.",
+  },
+  {
+    language: "JavaScript",
+    description: "Build a debounce utility function with configurable delay.",
+  },
+  {
+    language: "Python",
+    description:
+      "Write a script to download files from a URL with error handling.",
+  },
+  {
+    language: "TypeScript",
+    description:
+      "Implement a REST API endpoint for user authentication using JWT.",
+  },
+  {
+    language: "C++",
+    description:
+      "Implement a function to find the longest palindromic substring.",
+  },
+  {
+    language: "Auto (KernelAI intelligently selects the best language)",
+    description:
+      "Write a query to find the second highest salary from an employee table.",
+  },
+  {
+    language: "Go",
+    description: "Design a rate limiter using Redis.",
+  },
+];
+
 export const languages = [
   "Auto (KernelAI intelligently selects the best language)",
   "Java",
