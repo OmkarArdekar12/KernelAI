@@ -80,7 +80,7 @@ const CodeExplanation = ({ addToHistory }: CodeExplanationProps) => {
               htmlFor="code"
               className="block text-sm font-medium text-gray-300 ml-1"
             >
-              Paste your code
+              Code to Explain
             </label>
             <div className="block text-sm font-medium text-gray-300 mr-1">
               {code.length} chars
