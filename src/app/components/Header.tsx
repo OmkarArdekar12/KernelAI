@@ -14,8 +14,8 @@ const Header = () => {
         text="An intelligent coding companion to explain, debug, and generate code -
         powered by advanced AI reasoning."
         className="text-emerald-300/80 text-lg max-w-2xl mx-auto"
-        speed={34}
-        delay={2100}
+        delay={2000}
+        speed={30}
       />
     </div>
   );
