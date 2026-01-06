@@ -15,7 +15,7 @@ const Header = () => {
         powered by advanced AI reasoning."
         className="text-emerald-300/80 text-lg max-w-2xl mx-auto"
         delay={2000}
-        speed={30}
+        speed={34}
       />
     </div>
   );

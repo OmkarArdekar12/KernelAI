@@ -33,7 +33,7 @@ const MainContent = () => {
       initial={{ display: "none", opacity: 0, y: 0, scale: 0.7 }}
       animate={{ display: "flex", opacity: 1, y: 0, scale: 1 }}
       transition={{
-        duration: 0.5,
+        duration: 0.6,
         ease: "easeOut",
         delay: 5,
       }}
