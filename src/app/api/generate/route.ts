@@ -24,7 +24,8 @@ export const POST = async (req: NextRequest) => {
     const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const codeLanguage =
-      !language || language === "Auto"
+      !language ||
+      language === "Auto (KernelAI intelligently selects the best language)"
         ? "the most appropriate programming language"
         : language;
 
