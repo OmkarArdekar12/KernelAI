@@ -6,7 +6,7 @@
 
 ### Built with a strong emphasis on clean architecture and developer experience, KernelAI delivers structured, well-formatted outputs using Markdown rendering, terminal-style code blocks with copy support, and readable explanations instead of raw text dumps. The platform features a fully responsive interface with smooth micro-animations, fast typewriter-style output rendering, intelligent language selection, and interaction history tracking—ensuring clarity, usability, and a production-grade experience aligned with modern industry standards.
 
-### ✨ Core Features
+## ✨ Core Features
 
 - Code Explanation
 - Code Debugging
@@ -38,5 +38,34 @@
 | **AI Integration**             | Google Generative AI (Gemini) | Code generation, explanation, and debugging                   |
 | **Backend APIs**               | Next.js API Routes            | Secure server-side AI request handling                        |
 | **Type Safety**                | TypeScript                    | Static typing and safer codebase                              |
+
+## Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/OmkarArdekar/kernelAI.git
+cd kernel-ai
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Set up environment variables
+
+- Create a `.env.local` file in the root directory and add your Gemini API key
+
+```env
+GEMINI_API_KEY=your_api_key_here" > .env.local
+```
+
+4. Run the server
+
+```bash
+npm run dev
+```
 
 <!-- KernelAI is an advanced AI-powered coding assistant designed to enhance developer productivity by providing intelligent code explanations, debugging assistance, and automated code generation. Built with a strong emphasis on clean architecture and developer experience, KernelAI delivers structured, well-formatted outputs using Markdown rendering, terminal-style code blocks with copy support, and readable explanations instead of raw text dumps. The platform features a fully responsive interface with smooth micro-animations, fast typewriter-style output rendering, intelligent language selection, and interaction history tracking—ensuring clarity, usability, and a production-grade experience aligned with modern industry standards. -->
