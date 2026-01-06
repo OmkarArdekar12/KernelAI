@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "KernelAI – Intelligent Coding Assistant",
+  title: "KernelAI - Intelligent Coding Assistant",
   description:
     "KernelAI is an intelligent coding assistant powered by advanced AI reasoning. Explain, debug, and generate code faster with confidence.",
 
