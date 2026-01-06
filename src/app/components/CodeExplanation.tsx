@@ -91,6 +91,7 @@ const CodeExplanation = ({ addToHistory }: CodeExplanationProps) => {
               name="code"
               id="code"
               rows={12}
+              spellCheck={false}
               value={code}
               readOnly={loading}
               onChange={(e) => setCode(e.target.value)}
