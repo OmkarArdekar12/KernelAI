@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import HistoryPanel from "./HistoryPanel";
 import { HistoryItem, Tab } from "../types";
 import CodeExplanation from "./CodeExplanation";
@@ -28,7 +29,16 @@ const MainContent = () => {
   };
 
   return (
-    <div className="w-full flex flex-col items-start justify-center lg:flex-row gap-8 py-2 px-1 sm:px-4 md:px-10 transition-all duration-300">
+    <motion.div
+      initial={{ display: "none", opacity: 0, y: 0, scale: 0.7 }}
+      animate={{ display: "flex", opacity: 1, y: 0, scale: 1 }}
+      transition={{
+        duration: 0.5,
+        ease: "easeOut",
+        delay: 5,
+      }}
+      className="w-full flex flex-col items-start justify-center lg:flex-row gap-8 py-2 px-1 sm:px-4 md:px-10 transition-all duration-300"
+    >
       <div className="w-full lg:w-2/3 flex flex-col">
         <div className="w-full bg-black-800/50 backdrop-blur-xl rounded-2xl shadow-2xl border border-emerald-600/95">
           <div className="w-full flex flex-wrap items-center gap-3 border-b border-emerald-600/95 bg-black-900/50 p-2">
@@ -68,7 +78,7 @@ const MainContent = () => {
       <div className="w-full lg:w-1/3 flex items-center justify-center">
         <HistoryPanel history={history} />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

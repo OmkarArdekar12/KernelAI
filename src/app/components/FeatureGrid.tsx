@@ -9,7 +9,7 @@ const FeatureGrid = () => {
       initial={{ opacity: 0, y: 0, scale: 0.8 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{
-        duration: 0.7,
+        duration: 0.6,
         ease: "easeOut",
         delay: 2.5,
       }}
