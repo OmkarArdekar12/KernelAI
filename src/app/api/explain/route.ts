@@ -30,7 +30,7 @@ Guidelines:\n
 - Mention edge and corner cases if applicable.\n
 - Keep the explanation clean and structured.\n
 Output Format (STRICT):\n
-1. Code Overview\n
+1. Code Overview (with entire code in terminal/code box first)\n
 2. Step-by-Step Explanation\n
 3. Key Concepts Used\n
 4. Edge & Corner Cases\n
