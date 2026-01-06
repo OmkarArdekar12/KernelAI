@@ -3,6 +3,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextRequest, NextResponse } from "next/server";
 
 const apiKey = process.env.GEMINI_API_KEY;
+
 if (!apiKey) {
   throw new Error("GEMINI API KEY is not set in Environment Variables.");
 }
@@ -13,12 +14,14 @@ export const POST = async (req: NextRequest) => {
   try {
     const { code }: ExplainRequest = await req.json();
 
-    if (!code) {
+    if (!code || !code.trim()) {
       return NextResponse.json({ error: "Code is Required" }, { status: 400 });
     }
 
     const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+
     const prompt = `Please explain the following code in detail: \n\n${code}\n\nExplanation:`;
+
     const result = await model.generateContent(prompt);
     const response = await result.response;
     const explanation = response.text();
