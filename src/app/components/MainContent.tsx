@@ -33,9 +33,9 @@ const MainContent = () => {
       initial={{ display: "none", opacity: 0, y: 0, scale: 0.7 }}
       animate={{ display: "flex", opacity: 1, y: 0, scale: 1 }}
       transition={{
-        duration: 0.6,
+        duration: 0.7,
         ease: "easeOut",
-        delay: 5,
+        delay: 4.5,
       }}
       className="w-full flex flex-col items-start justify-center lg:flex-row gap-8 py-2 px-1 sm:px-4 md:px-10 transition-all duration-300"
     >

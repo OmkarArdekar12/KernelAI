@@ -11,7 +11,7 @@ const FeatureGrid = () => {
       transition={{
         duration: 0.6,
         ease: "easeOut",
-        delay: 2.5,
+        delay: 3,
       }}
       className="w-full flex items-center justify-center py-10 px-6 md:px-20 transition-all duration-100"
     >
