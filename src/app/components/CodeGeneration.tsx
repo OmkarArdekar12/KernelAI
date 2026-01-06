@@ -154,4 +154,5 @@ const CodeGeneration = ({ addToHistory }: CodeGenerationProps) => {
     </div>
   );
 };
+
 export default CodeGeneration;

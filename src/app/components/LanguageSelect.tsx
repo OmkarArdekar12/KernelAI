@@ -8,7 +8,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 interface LanguageSelectProps {
   value: string;
   options: string[];
-  disabled?: boolean;
+  disabled: boolean;
   onChange: (value: string) => void;
   open: boolean;
   toggleSelect: (value: boolean) => void;
