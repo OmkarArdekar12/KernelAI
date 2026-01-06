@@ -16,9 +16,12 @@ interface CodeGenerationProps {
 
 const CodeGeneration = ({ addToHistory }: CodeGenerationProps) => {
   const [description, setDescription] = useState<string>("");
-  const [language, setLanguage] = useState<string>("Auto");
+  const [language, setLanguage] = useState<string>(
+    "Auto (KernelAI intelligently selects the best language)"
+  );
   const [generatedCode, setGeneratedCode] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
+  const [open, setOpen] = useState(false);
 
   const handleGenerate = async () => {
     if (!description.trim()) {
@@ -30,6 +33,7 @@ const CodeGeneration = ({ addToHistory }: CodeGenerationProps) => {
 
     setLoading(true);
     setGeneratedCode("");
+    setOpen(false);
     toast.success("KernelAI is generating your code...", {
       id: "code-generate",
     });
@@ -92,6 +96,8 @@ const CodeGeneration = ({ addToHistory }: CodeGenerationProps) => {
               options={languages}
               disabled={loading}
               onChange={setLanguage}
+              open={open}
+              toggleSelect={setOpen}
             />
           </div>
 

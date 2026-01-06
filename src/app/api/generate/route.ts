@@ -45,7 +45,7 @@ Guidelines:\n
   - Space Complexity\n
 Output Rules:\n
 - Return the code (code in single terminal/code box) and code explanation separately.\n
-- Just Give Ouput in the following format:\n
+- Just Give Output in the following format:\n
   1. Code (language)\n
   2. Code Explanation\n
   3. Code Core Points, Best Practices (Industry Level) and Edge & Corner Cases\n
