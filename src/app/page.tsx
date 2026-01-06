@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import MainContent from "./components/MainContent";
 import MatrixBackground from "./components/MatrixBackground";
+import ToasterMessage from "./components/ToasterMessage";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
           <Footer />
         </footer>
       </div>
+      <ToasterMessage />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { HistoryItem } from "../types";
+import toast from "react-hot-toast";
 
 interface CodeExplanationProps {
   addToHistory: (
