@@ -17,7 +17,12 @@ const CodeExplanation = ({ addToHistory }: CodeExplanationProps) => {
 
   const handleExplain = async () => {};
 
-  return <div>CodeExplanation</div>;
+  return (
+    <div>
+      {toast.success("Done")}
+      {toast.error("Oops")}CodeExplanation
+    </div>
+  );
 };
 
 export default CodeExplanation;

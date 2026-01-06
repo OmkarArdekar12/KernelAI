@@ -5,17 +5,20 @@ import { Toaster } from "react-hot-toast";
 const ToasterMessage = () => {
   return (
     <Toaster
-      position="bottom-right"
+      position="top-right"
       toastOptions={{
-        duration: 3500,
+        duration: 3700,
         style: {
-          background: "rgba(0, 0, 0, 0.75)",
-          color: "#d1fae5",
-          backdropFilter: "blur(12px)",
-          border: "1px solid rgba(16, 185, 129, 0.4)",
+          background:
+            "linear-gradient(135deg, rgba(16,185,129,0.22), rgba(132,204,22,0.22), rgba(20,184,166,0.22))",
+          backdropFilter: "blur(16px)",
+          WebkitBackdropFilter: "blur(16px)",
+          color: "rgba(255, 255, 255, 0.94)",
+          border: "1px solid rgba(16, 185, 129, 0.45)",
           borderRadius: "14px",
-          boxShadow: "0 10px 30px rgba(16, 185, 129, 0.15)",
+          boxShadow: "0 6px 20px rgba(16, 185, 129, 0.18)",
           fontSize: "14px",
+          fontWeight: 500,
         },
       }}
     />
