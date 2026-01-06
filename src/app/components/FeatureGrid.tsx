@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 const FeatureGrid = () => {
   return (
     <motion.section
-      initial={{ opacity: 0, y: 0, scale: 0.8 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
+      initial={{ display: "none", opacity: 0, y: 0, scale: 0.8 }}
+      animate={{ display: "flex", opacity: 1, y: 0, scale: 1 }}
       transition={{
         duration: 0.6,
         ease: "easeOut",
