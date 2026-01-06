@@ -23,4 +23,20 @@
 - Context-Aware AI Prompts & Sample Inputs for Quick Testing
 - Client-Side Safe API Handling
 
+## 💻 Technologies Used
+
+| Category                       | Technology                    | Purpose                                                       |
+| ------------------------------ | ----------------------------- | ------------------------------------------------------------- |
+| **Frontend Framework**         | Next.js (App Router)          | Full-stack React framework for routing, SSR, and API handling |
+| **UI Library**                 | React 19                      | Component-based UI development                                |
+| **Styling and Responsiveness** | Tailwind CSS 4                | Utility-first styling with modern design system               |
+| **Animations**                 | Framer Motion                 | Smooth, performant UI animations and transitions              |
+| **Icons**                      | React Icons                   | Consistent, scalable icon system                              |
+| **Notifications**              | React Hot Toast               | Real-time toast notifications and feedback                    |
+| **Markdown Rendering**         | React Markdown                | Structured rendering of AI-generated output                   |
+| **Markdown Extensions**        | Remark GFM                    | GitHub-Flavored Markdown support (tables, lists, code)        |
+| **AI Integration**             | Google Generative AI (Gemini) | Code generation, explanation, and debugging                   |
+| **Backend APIs**               | Next.js API Routes            | Secure server-side AI request handling                        |
+| **Type Safety**                | TypeScript                    | Static typing and safer codebase                              |
+
 <!-- KernelAI is an advanced AI-powered coding assistant designed to enhance developer productivity by providing intelligent code explanations, debugging assistance, and automated code generation. Built with a strong emphasis on clean architecture and developer experience, KernelAI delivers structured, well-formatted outputs using Markdown rendering, terminal-style code blocks with copy support, and readable explanations instead of raw text dumps. The platform features a fully responsive interface with smooth micro-animations, fast typewriter-style output rendering, intelligent language selection, and interaction history tracking—ensuring clarity, usability, and a production-grade experience aligned with modern industry standards. -->
