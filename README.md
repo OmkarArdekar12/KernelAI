@@ -58,14 +58,26 @@ npm install
 
 - Create a `.env.local` file in the root directory and add your Gemini API key
 
+````md
+- **.env.local**
+
 ```env
 GEMINI_API_KEY=your_api_key_here" > .env.local
 ```
+````
 
 4. Run the server
 
 ```bash
 npm run dev
 ```
+
+## Author 👨‍💻
+
+### Omkar Ardekar 💻
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=circuitverse&logoColor=white)](https://www.linkedin.com/in/omkarardekar09)
+
+---
 
 <!-- KernelAI is an advanced AI-powered coding assistant designed to enhance developer productivity by providing intelligent code explanations, debugging assistance, and automated code generation. Built with a strong emphasis on clean architecture and developer experience, KernelAI delivers structured, well-formatted outputs using Markdown rendering, terminal-style code blocks with copy support, and readable explanations instead of raw text dumps. The platform features a fully responsive interface with smooth micro-animations, fast typewriter-style output rendering, intelligent language selection, and interaction history tracking—ensuring clarity, usability, and a production-grade experience aligned with modern industry standards. -->
