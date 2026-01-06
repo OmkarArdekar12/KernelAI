@@ -51,7 +51,7 @@ Output Rules:\n
   4. Time and Space Complexity\n
   5. Conclusion\n
 Problem Description:\n
-  ${description}`;
+${description}\n\n`;
 
     const result = await model.generateContent(prompt);
     const response = await result.response;
