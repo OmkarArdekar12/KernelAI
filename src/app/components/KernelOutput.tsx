@@ -17,6 +17,7 @@ function useTypewriter(text: string, speed = 6, step = 5) {
     if (!text) {
       return;
     }
+
     setOutput("");
     let i = 0;
     const interval = setInterval(() => {
