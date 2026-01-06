@@ -28,7 +28,6 @@ function calculateTotal(items) {
 export const sampleError = "TypeError: Cannot read properties of undefined.";
 
 export const languages = [
-  "Auto (Let KernelAI decide)",
   "Java",
   "Python",
   "C++",

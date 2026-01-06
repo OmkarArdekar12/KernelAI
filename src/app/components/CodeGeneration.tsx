@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { HistoryItem } from "../types";
 import toast from "react-hot-toast";
 import { languages } from "../data/examples";
-import { FaLaptopCode } from "react-icons/fa";
+import { GiProcessor } from "react-icons/gi";
 import KernelOutput from "./KernelOutput";
+import LanguageSelect from "./LanguageSelect";
 
 interface CodeGenerationProps {
   addToHistory: (
@@ -82,45 +83,39 @@ const CodeGeneration = ({ addToHistory }: CodeGenerationProps) => {
       </div>
       <div className="w-full flex flex-col items-center justify-center space-y-4 p-1">
         <div className="w-full flex flex-col justify-center p-2 gap-2">
-          <div className="w-full flex flex-col gap-2 px-2">
-            <label className="text-sm font-medium text-gray-300">
+          <div className="w-full flex flex-col gap-2 pb-2">
+            <label className="text-sm font-medium text-gray-300 pl-2">
               Programming Language
             </label>
-            <select
+            <LanguageSelect
               value={language}
+              options={languages}
               disabled={loading}
-              onChange={(e) => setLanguage(e.target.value)}
-              className="bg-black/60 text-emerald-100 border border-emerald-500/40 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-400/30"
-            >
-              <option value="Auto">Auto (Best Choice)</option>
-              {languages.map((lang) => (
-                <option key={lang} value={lang}>
-                  {lang}
-                </option>
-              ))}
-            </select>
+              onChange={setLanguage}
+            />
           </div>
+
           <div className="w-full flex items-center justify-between px-2">
             <label
-              htmlFor="code"
+              htmlFor="description"
               className="block text-sm font-medium text-gray-300 ml-1"
             >
-              Code to Explain
+              Description
             </label>
             <div className="block text-sm font-medium text-gray-300 mr-1">
-              {code.length} chars
+              {description.length} chars
             </div>
           </div>
           <div className="w-full flex items-center justify-center">
             <textarea
-              name="code"
-              id="code"
-              rows={12}
+              name="description"
+              id="description"
+              rows={10}
               spellCheck={false}
-              value={code}
+              value={description}
               readOnly={loading}
-              onChange={(e) => setCode(e.target.value)}
-              placeholder="Paste your code here to get a detailed explanation"
+              onChange={(e) => setDescription(e.target.value)}
+              placeholder="Describe the problem, requirements, constraints, and expected output here..."
               className={`w-full min-h-90 bg-black/60 text-emerald-100 placeholder:text-emerald-400/40 rounded-xl border border-emerald-500/40 px-4 py-3 font-normal text-md leading-relaxed backdrop-blur-md focus:outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/30 transition-all duration-200 ease-out resize-none overflow-y-auto kernel-scrollbar ${
                 loading ? "cursor-not-allowed opacity-70" : ""
               }`}
@@ -129,25 +124,25 @@ const CodeGeneration = ({ addToHistory }: CodeGenerationProps) => {
         </div>
         <div className="w-full flex items-center justify-center p-1">
           <button
-            onClick={handleExplain}
-            disabled={loading || !code}
+            onClick={handleGenerate}
+            disabled={loading || !description}
             className={`w-full inline-flex items-center justify-center px-8 py-3 rounded-xl font-semibold text-white bg-emerald-600/95 shadow-lg shadow-emerald-500/25 hover:bg-emerald-500 hover:text-black transition-all duration-200 ease-out cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none disabled:bg-gray-500/60 disabled:hover:text-white`}
           >
             {loading ? (
               <span className="flex items-center gap-2">
                 <span className="h-5 w-5 rounded-full border-2 border-white/50 border-t-white animate-spin" />
-                Analyzing Code...
+                Generating Code...
               </span>
             ) : (
               <span className="flex items-center gap-3">
-                <FaLaptopCode className="size-6" />
-                <span>Explain Code</span>
+                <GiProcessor className="size-6" />
+                <span>Generate Code</span>
               </span>
             )}
           </button>
         </div>
-        {explanation && (
-          <KernelOutput output={explanation} outputType="Explanation" />
+        {generatedCode && (
+          <KernelOutput output={generatedCode} outputType="Generated Code" />
         )}
       </div>
     </div>
