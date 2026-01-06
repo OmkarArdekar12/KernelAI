@@ -55,7 +55,7 @@ const HistoryPanel = ({ history }: HistoryItemProps) => {
           Your recent interactions with KernelAI
         </p>
       </div>
-      <div className="p-4 max-h-96 overflow-y-auto kernel-scrollbar">
+      <div className="p-4 max-h-120 overflow-y-auto kernel-scrollbar">
         {history.length === 0 ? (
           <div className="text-center py-8">
             <div className="w-full bg-black-800/50 rounded-full flex items-center justify-center">
