@@ -83,7 +83,7 @@ const CodeExplanation = ({ addToHistory }: CodeExplanationProps) => {
               value={code}
               onChange={(e) => setCode(e.target.value)}
               placeholder="Paste your code here to get a detailed explanation"
-              className="w-full min-h-[420px] bg-black/60 text-emerald-100 placeholder:text-emerald-400/40 rounded-xl border border-emerald-500/40 px-4 py-3 font-mono text-sm leading-relaxed backdrop-blur-md focus:outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/30 transition-all duration-200 ease-out resize-none"
+              className="w-full min-h-90 bg-black/60 text-emerald-100 placeholder:text-emerald-400/40 rounded-xl border border-emerald-500/40 px-4 py-3 font-mono text-sm leading-relaxed backdrop-blur-md focus:outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/30 transition-all duration-200 ease-out resize-none overflow-y-auto kernel-scrollbar"
             ></textarea>
           </div>
         </div>
