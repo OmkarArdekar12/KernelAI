@@ -37,7 +37,7 @@ Output Format (STRICT):\n
 5. Time and Space Complexity\n
 6. Conclusion\n
 Code to Explain:\n
-${code}`;
+${code}\n\n`;
 
     const result = await model.generateContent(prompt);
     const response = await result.response;
