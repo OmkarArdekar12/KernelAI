@@ -8,7 +8,6 @@ import { FaFileCode } from "react-icons/fa";
 import { VscDebugAlt } from "react-icons/vsc";
 import { GiRegeneration } from "react-icons/gi";
 import { MdHistory } from "react-icons/md";
-import { FaHistory } from "react-icons/fa";
 
 interface HistoryViewerProps {
   item: HistoryItem;
