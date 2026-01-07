@@ -11,7 +11,7 @@ interface HistoryOutputProps {
   output: string;
 }
 
-const KernelOutput = ({ outputType, output }: HistoryOutputProps) => {
+const HistoryOutput = ({ outputType, output }: HistoryOutputProps) => {
   const copyToClipboard = async (text: string, label?: string) => {
     try {
       await navigator.clipboard.writeText(text);
@@ -193,4 +193,4 @@ const KernelOutput = ({ outputType, output }: HistoryOutputProps) => {
   );
 };
 
-export default KernelOutput;
+export default HistoryOutput;
