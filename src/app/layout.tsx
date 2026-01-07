@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     siteName: "KernelAI",
     images: [
       {
-        url: "/kernelAI-logo.png",
+        url: "/og-kernelai.png",
         width: 1200,
         height: 630,
         alt: "KernelAI - Intelligent Coding Assistant",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     title: "KernelAI - Intelligent Coding Assistant",
     description:
       "Your intelligent coding companion to explain, debug, and generate code with AI.",
-    images: ["/kernelAI-logo.png"],
+    images: ["/og-kernelai.png"],
   },
 
   robots: {
@@ -84,6 +84,11 @@ export const metadata: Metadata = {
   },
 
   category: "technology",
+
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
