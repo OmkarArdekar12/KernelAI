@@ -37,7 +37,7 @@
 </p>
 </h2>
 
-<h2>
+<h2 id="seo-result">
 <a href="https://www.google.com/search?q=site:kernel-ai.vercel.app" target="_blank" rel="noopener noreferrer">
 <p>🔍 SEO Result - Click here to see</p>
 <p><img src="./public/kernelAISEOResult.png" width="95%" alt="KernelAI SEO Result Image"/></p>
