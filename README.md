@@ -27,6 +27,16 @@
 </a>
 </h2>
 
+<h2>
+<a href="https://www.youtube.com/watch?v=paz9vs8QPfk" target="_blank" rel="noopener noreferrer">
+<p><img src="./public/kernelAI-logo.png" width="30" alt="KernelAI Logo" valign="middle" />&nbsp;KernelAI Preview Video</p>
+<p>
+&nbsp;Click here to watch the full video on YouTube<br/>
+<img src="./public/kernelAIGIF.gif"  alt="CodeElevate Demo Video" height="45%" valign="middle"/>
+</p>
+</a>
+</h2>
+
 ## ✨ Core Features
 
 - **Code Explanation**
@@ -99,7 +109,7 @@ npm install
 - Create a `.env.local` file in the root directory and add your Gemini API key
 
 ```
-GEMINI_API_KEY=your_api_key"
+GEMINI_API_KEY=your_api_key
 ```
 
 4. Run the server
