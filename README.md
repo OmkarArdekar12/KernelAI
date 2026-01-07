@@ -33,12 +33,12 @@
 </p>
 </a>
 <p>
-<img src="./public/kernelAIGIF.gif" alt="KernelAI Video GIF" width="45%"/>
+<img src="./public/kernelAIGIF.gif" alt="KernelAI Video GIF" width="95%"/>
 </p>
 </h2>
 
 <h2>
-<a href="https://www.google.com/search?q=Kernel+AI+-+Intelligent+Coding+Assistant+vercel" target="_blank" rel="noopener noreferrer">
+<a href="https://www.google.com/search?q=site:kernel-ai.vercel.app" target="_blank" rel="noopener noreferrer">
 <p>🔍 SEO Result - Click here to see</p>
 <p><img src="./public/kernelAISEOResult.png" width="95%" alt="KernelAI SEO Result Image"/></p>
 </a>
