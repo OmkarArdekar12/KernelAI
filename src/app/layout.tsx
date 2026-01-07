@@ -34,9 +34,11 @@ export const metadata: Metadata = {
     "AI coding assistant",
     "code explanation AI",
     "code generation AI",
+    "code debugging AI",
     "AI code debugger",
     "developer tools",
     "programming assistant",
+    "kernel-ai",
     "Gemini AI",
     "Next.js AI project",
   ],
@@ -44,6 +46,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Omkar Ardekar" }],
   creator: "Omkar Ardekar",
   publisher: "KernelAI",
+
+  other: {
+    "profile:linkedin": "https://www.linkedin.com/in/omkarardekar09",
+    "profile:github": "https://github.com/OmkarArdekar12",
+  },
 
   openGraph: {
     title: "KernelAI - Intelligent Coding Assistant",
@@ -98,7 +105,33 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              name: "KernelAI",
+              applicationCategory: "DeveloperApplication",
+              operatingSystem: "Web",
+              url: "https://kernel-ai.vercel.app",
+              description:
+                "AI-powered coding assistant for code explanation, debugging, and generation with structured, Markdown-aware output.",
+              creator: {
+                "@type": "Person",
+                name: "Omkar Ardekar",
+                url: "https://kernel-ai.vercel.app",
+                sameAs: [
+                  "https://www.linkedin.com/in/omkarardekar09",
+                  "https://github.com/OmkarArdekar12",
+                ],
+              },
+            }),
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
