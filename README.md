@@ -29,17 +29,17 @@
 
 <h2>
 <a href="https://www.youtube.com/watch?v=paz9vs8QPfk" target="_blank" rel="noopener noreferrer">
-<p><img src="./public/kernelAI-logo.png" width="30" alt="KernelAI Video" valign="middle" />&nbsp;KernelAI Preview Video</p>
-<p>
-&nbsp;Click here to watch the full video on YouTube<br/>
-<img src="./public/kernelAIGIF.gif"  alt="KernelAI Video GIF" width="45%"/>
+<p>📽️ KernelAI Preview Video - Click here to watch the full video on YouTube
 </p>
 </a>
+<p>
+<img src="./public/kernelAIGIF.gif" alt="KernelAI Video GIF" width="45%"/>
+</p>
 </h2>
 
 <h2>
 <a href="https://www.google.com/search?q=Kernel+AI+-+Intelligent+Coding+Assistant+vercel" target="_blank" rel="noopener noreferrer">
-<p>SEO Result - Click here to see</p>
+<p>🔍 SEO Result - Click here to see</p>
 <p><img src="./public/kernelAISEOResult.png" width="95%" alt="KernelAI SEO Result Image"/></p>
 </a>
 </h2>
