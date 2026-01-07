@@ -8,10 +8,14 @@ import CodeExplanation from "./CodeExplanation";
 import CodeDebugging from "./CodeDebugging";
 import CodeGeneration from "./CodeGeneration";
 import tabs from "../data/tabs";
+import HistoryViewer from "./HistoryViewer";
 
 const MainContent = () => {
   const [activeTab, setActiveTab] = useState<Tab["id"]>("explain");
   const [history, setHistory] = useState<HistoryItem[]>([]);
+  const [selectedHistory, setSelectedHistory] = useState<HistoryItem | null>(
+    null
+  );
 
   const addToHistory = (
     type: HistoryItem["type"],
@@ -76,8 +80,14 @@ const MainContent = () => {
         </div>
       </div>
       <div className="w-full lg:w-1/3 flex items-center justify-center">
-        <HistoryPanel history={history} />
+        <HistoryPanel history={history} onSelect={setSelectedHistory} />
       </div>
+      {selectedHistory && (
+        <HistoryViewer
+          item={selectedHistory}
+          onClose={() => setSelectedHistory(null)}
+        />
+      )}
     </motion.div>
   );
 };

@@ -8,9 +8,10 @@ import { FaHistory } from "react-icons/fa";
 
 interface HistoryItemProps {
   history: HistoryItem[];
+  onSelect: (item: HistoryItem) => void;
 }
 
-const HistoryPanel = ({ history }: HistoryItemProps) => {
+const HistoryPanel = ({ history, onSelect }: HistoryItemProps) => {
   const formatContent = (content: string, maxLength: number = 100): string => {
     if (content.length <= maxLength) {
       return content;
@@ -73,8 +74,9 @@ const HistoryPanel = ({ history }: HistoryItemProps) => {
               const Icon = config.icon;
               return (
                 <div
+                  onClick={() => onSelect(item)}
                   key={item.id}
-                  className="w-full flex flex-col items-center p-4 rounded-xl border border-gray-600/50 hover:border-gray-500/50 transition-all duration-200 group backdrop-blur-sm bg-black-900/50"
+                  className="w-full flex flex-col items-center p-4 rounded-xl border border-gray-600/50 hover:border-gray-500/50 transition-all duration-200 group backdrop-blur-sm bg-black-900/50 cursor-pointer"
                 >
                   <div className="w-full flex flex-col items-start justify-center gap-1 mb-3">
                     <div
