@@ -94,7 +94,7 @@
 1. Clone the repository
 
 ```bash
-git clone https://github.com/OmkarArdekar/kernelAI.git
+git clone https://github.com/OmkarArdekar12/kernelAI.git
 cd kernel-ai
 ```
 
