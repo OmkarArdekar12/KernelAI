@@ -32,14 +32,14 @@
 <p><img src="./public/kernelAI-logo.png" width="30" alt="KernelAI Video" valign="middle" />&nbsp;KernelAI Preview Video</p>
 <p>
 &nbsp;Click here to watch the full video on YouTube<br/>
-<img src="./public/kernelAIGIF.gif"  alt="KernelAI Video GIF" height="45%" valign="middle"/>
+<img src="./public/kernelAIGIF.gif"  alt="KernelAI Video GIF" width="45%"/>
 </p>
 </a>
 </h2>
 
 <h2>
 <a href="https://www.google.com/search?q=Kernel+AI+-+Intelligent+Coding+Assistant+vercel" target="_blank" rel="noopener noreferrer">
-<p>SEO Result</p>
+<p>SEO Result - Click here to see</p>
 <p><img src="./public/kernelAISEOResult.png" width="95%" alt="KernelAI SEO Result Image"/></p>
 </a>
 </h2>
