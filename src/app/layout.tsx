@@ -15,10 +15,15 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "KernelAI - Intelligent Coding Assistant",
+  title: {
+    default: "KernelAI - Intelligent Coding Assistant",
+    template: "%s | KernelAI",
+  },
 
   description:
     "KernelAI is an advanced AI-powered coding assistant designed to enhance developer productivity by providing intelligent code explanations, debugging assistance, and automated code generation.",
+
+  metadataBase: new URL("https://kernel-ai.vercel.app"),
 
   verification: {
     google: "cIpfNdHkzMpM_Wpuo6JXHOkMH_wEpHyrgBe_f46e5Ig",
@@ -27,6 +32,7 @@ export const metadata: Metadata = {
   keywords: [
     "KernelAI",
     "AI coding assistant",
+    "code explanation AI",
     "code generation AI",
     "AI code debugger",
     "developer tools",
@@ -39,13 +45,11 @@ export const metadata: Metadata = {
   creator: "Omkar Ardekar",
   publisher: "KernelAI",
 
-  metadataBase: new URL("https://kernelai.vercel.app"),
-
   openGraph: {
     title: "KernelAI - Intelligent Coding Assistant",
     description:
       "Explain, debug, and generate code using KernelAI — an advanced AI-powered coding assistant.",
-    url: "https://kernelai.vercel.app",
+    url: "https://kernel-ai.vercel.app",
     siteName: "KernelAI",
     images: [
       {
