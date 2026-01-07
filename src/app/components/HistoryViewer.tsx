@@ -3,11 +3,11 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { LuX } from "react-icons/lu";
 import { HistoryItem } from "../types";
-import KernelOutput from "./KernelOutput";
 import { FaFileCode } from "react-icons/fa";
 import { VscDebugAlt } from "react-icons/vsc";
 import { GiRegeneration } from "react-icons/gi";
 import { MdHistory } from "react-icons/md";
+import HistoryOutput from "./HistoryOutput";
 
 interface HistoryViewerProps {
   item: HistoryItem;
@@ -69,7 +69,7 @@ const HistoryViewer = ({ item, onClose }: HistoryViewerProps) => {
               </pre>
             </div>
 
-            <KernelOutput outputType="Output" output={item.output} />
+            <HistoryOutput outputType="Output" output={item.output} />
           </div>
         </motion.div>
       </motion.div>
