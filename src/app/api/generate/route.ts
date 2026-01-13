@@ -45,6 +45,8 @@ Guidelines:\n
   - Space Complexity\n
 Output Rules:\n
 - Return the code (code in single terminal/code box) and code explanation separately.\n
+- Don't add any single comment in the code.\n
+- Can explain the code in the Code Explanation section by selecting the particular code snippet (if required).
 - Just Give Output in the following format:\n
   1. Code (language)\n
   2. Code Explanation\n
