@@ -41,6 +41,8 @@
 <a href="https://www.google.com/search?q=site:kernel-ai.vercel.app" target="_blank" rel="noopener noreferrer">
 <p>🔍 SEO Result - Click here to see</p>
 <p><img src="./public/kernelAISEOResult.png" width="95%" alt="KernelAI SEO Result Image"/></p>
+<p><img src="./public/seoSitemap.png" width="95%" alt="KernelAI Sitemap"/></p>
+<p><img src="./public/seoURLInspection.png" width="95%" alt="KernelAI URL Inspection"/></p>
 </a>
 </h2>
 
