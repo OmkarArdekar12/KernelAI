@@ -103,8 +103,8 @@
 1. Clone the repository
 
 ```bash
-git clone https://github.com/OmkarArdekar12/kernelAI.git
-cd kernel-ai
+git clone https://github.com/OmkarArdekar12/KernelAI.git
+cd KernelAI
 ```
 
 2. Install dependencies
