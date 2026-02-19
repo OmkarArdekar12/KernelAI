@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import toast from "react-hot-toast";
 import { LuCopy, LuCheck } from "react-icons/lu";
+import rehypeHighlight from "rehype-highlight";
 
 interface HistoryOutputProps {
   outputType: string;
@@ -48,6 +49,7 @@ const HistoryOutput = ({ outputType, output }: HistoryOutputProps) => {
           <span>Copy All</span>
         </button>
         <ReactMarkdown
+          // rehypePlugins={[rehypeHighlight]}
           remarkPlugins={[remarkGfm]}
           components={{
             p({ children }) {
