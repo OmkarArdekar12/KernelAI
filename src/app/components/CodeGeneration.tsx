@@ -3,6 +3,7 @@ import { HistoryItem } from "../types";
 import toast from "react-hot-toast";
 import { languages, samplePromptsWithLanguages } from "../data/examples";
 import { GiProcessor } from "react-icons/gi";
+import { ScaleLoader } from "react-spinners";
 import KernelOutput from "./KernelOutput";
 import LanguageSelect from "./LanguageSelect";
 
@@ -10,17 +11,17 @@ interface CodeGenerationProps {
   addToHistory: (
     type: HistoryItem["type"],
     input: string,
-    output: string
+    output: string,
   ) => void;
 }
 
 const CodeGeneration = ({ addToHistory }: CodeGenerationProps) => {
   const [description, setDescription] = useState<string>("");
   const [language, setLanguage] = useState<string>(
-    "Auto (KernelAI intelligently selects the best language)"
+    "Auto (KernelAI intelligently selects the best language)",
   );
   const [generatedCode, setGeneratedCode] = useState<string>("");
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
   const [open, setOpen] = useState(false);
 
   const handleGenerate = async () => {
@@ -54,7 +55,7 @@ const CodeGeneration = ({ addToHistory }: CodeGenerationProps) => {
         addToHistory(
           "generate",
           `Language: ${language}.\nDescription: ${description}`,
-          generatedCodeText
+          generatedCodeText,
         );
       } else {
         setGeneratedCode(`Error: ${data.error}`);
@@ -142,7 +143,7 @@ const CodeGeneration = ({ addToHistory }: CodeGenerationProps) => {
           >
             {loading ? (
               <span className="flex items-center gap-2">
-                <span className="h-5 w-5 rounded-full border-2 border-white/50 border-t-white animate-spin" />
+                <ScaleLoader color="white" />
                 Generating Code...
               </span>
             ) : (
