@@ -3,13 +3,14 @@ import { HistoryItem } from "../types";
 import toast from "react-hot-toast";
 import { sampleCode } from "../data/examples";
 import { FaLaptopCode } from "react-icons/fa";
+import { RingLoader } from "react-spinners";
 import KernelOutput from "./KernelOutput";
 
 interface CodeExplanationProps {
   addToHistory: (
     type: HistoryItem["type"],
     input: string,
-    output: string
+    output: string,
   ) => void;
 }
 
@@ -110,7 +111,7 @@ const CodeExplanation = ({ addToHistory }: CodeExplanationProps) => {
           >
             {loading ? (
               <span className="flex items-center gap-2">
-                <span className="h-5 w-5 rounded-full border-2 border-white/50 border-t-white animate-spin" />
+                <RingLoader size={25} color="white" />
                 Analyzing Code...
               </span>
             ) : (
