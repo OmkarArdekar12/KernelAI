@@ -21,7 +21,7 @@ const CodeGeneration = ({ addToHistory }: CodeGenerationProps) => {
     "Auto (KernelAI intelligently selects the best language)",
   );
   const [generatedCode, setGeneratedCode] = useState<string>("");
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
   const [open, setOpen] = useState(false);
 
   const handleGenerate = async () => {
