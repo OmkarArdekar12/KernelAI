@@ -3,13 +3,14 @@ import { HistoryItem } from "../types";
 import toast from "react-hot-toast";
 import { sampleBuggyCode, sampleError } from "../data/examples";
 import { VscDebugAll } from "react-icons/vsc";
+import { ClimbingBoxLoader, PacmanLoader } from "react-spinners";
 import KernelOutput from "./KernelOutput";
 
 interface CodeDebuggingProps {
   addToHistory: (
     type: HistoryItem["type"],
     input: string,
-    output: string
+    output: string,
   ) => void;
 }
 
@@ -47,20 +48,20 @@ const CodeDebugging = ({ addToHistory }: CodeDebuggingProps) => {
         addToHistory(
           "debug",
           `Code:\n${code}\n\nError:\n${error}`,
-          debuggingText
+          debuggingText,
         );
       } else {
         setDebugging(`Error: ${data.error}`);
       }
     } catch (err) {
       setDebugging(
-        "Unable to generate debugging suggestions. Please try again."
+        "Unable to generate debugging suggestions. Please try again.",
       );
       toast.error(
         "Unable to generate debugging suggestions. Please try again.",
         {
           id: "code-debug-failed-error",
-        }
+        },
       );
     } finally {
       setLoading(false);
@@ -145,8 +146,8 @@ const CodeDebugging = ({ addToHistory }: CodeDebuggingProps) => {
             className={`w-full inline-flex items-center justify-center px-8 py-3 rounded-xl font-semibold text-white bg-emerald-600/95 shadow-lg shadow-emerald-500/25 hover:bg-emerald-500 hover:text-black transition-all duration-200 ease-out cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none disabled:bg-gray-500/60 disabled:hover:text-white`}
           >
             {loading ? (
-              <span className="flex items-center gap-2">
-                <span className="h-5 w-5 rounded-full border-2 border-white/50 border-t-white animate-spin" />
+              <span className="flex items-center gap-8">
+                <PacmanLoader size={10} color="white" />
                 Debugging Code...
               </span>
             ) : (
