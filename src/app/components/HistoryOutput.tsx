@@ -5,6 +5,8 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import toast from "react-hot-toast";
 import { LuCopy, LuCheck } from "react-icons/lu";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 interface HistoryOutputProps {
   outputType: string;
@@ -147,7 +149,6 @@ const HistoryOutput = ({ outputType, output }: HistoryOutputProps) => {
               }
               return <code className={className}>{children}</code>;
             },
-
             pre({ children }) {
               if (!React.isValidElement(children)) {
                 return null;
@@ -158,8 +159,9 @@ const HistoryOutput = ({ outputType, output }: HistoryOutputProps) => {
                 children?: React.ReactNode;
               }>;
 
-              const codeText = getCodeText(codeElement.props.children);
-              const className = codeElement.props.className;
+              const codeText = String(codeElement.props.children ?? "");
+              const className = codeElement.props.className || "";
+              const match = /language-(\w+)/.exec(className);
 
               return (
                 <div className="relative my-3 rounded-lg border border-emerald-500/40 bg-black/80 overflow-hidden">
@@ -169,18 +171,29 @@ const HistoryOutput = ({ outputType, output }: HistoryOutputProps) => {
                       <span className="h-2.5 w-2.5 rounded-full bg-yellow-400/80" />
                       <span className="h-2.5 w-2.5 rounded-full bg-green-500/80" />
                     </div>
+
                     <button
                       onClick={() => copyToClipboard(codeText, "Code")}
-                      className="flex items-center justify-center gap-1 text-xs text-emerald-300 hover:text-emerald-200 transition cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:text-emerald-300"
+                      className="flex items-center gap-1 text-xs text-emerald-300 hover:text-emerald-200"
                       type="button"
                     >
-                      <LuCopy />
+                      <LuCopy size={14} />
                       <span>Copy</span>
                     </button>
                   </div>
-                  <pre className="overflow-x-auto kernel-scrollbar px-4 py-3 text-sm leading-relaxed">
-                    <code className={className}>{codeText}</code>
-                  </pre>
+
+                  <SyntaxHighlighter
+                    style={vscDarkPlus}
+                    language={match ? match[1] : "javascript"}
+                    PreTag="div"
+                    customStyle={{
+                      margin: 0,
+                      background: "transparent",
+                      padding: "1rem",
+                    }}
+                  >
+                    {codeText.replace(/\n$/, "")}
+                  </SyntaxHighlighter>
                 </div>
               );
             },
